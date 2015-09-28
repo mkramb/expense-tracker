@@ -1,0 +1,64 @@
+@import 'base.less';
+
+@base-spacing: 10px;
+@base-border: 1px solid #ddd;
+
+body {
+  > .container {
+    margin-top: 80px;
+
+    .nav {
+      margin-bottom: @base-spacing * 2;
+
+      li {
+        padding-left: @base-spacing;
+
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+table {
+  border-bottom: @base-border;
+}
+
+.users {
+  padding-top: @base-spacing;
+  padding-bottom: @base-spacing;
+  border-bottom: @base-border;
+  border-top: @base-border;
+
+  .row {
+    padding-top: @base-spacing;
+
+    .users-label {
+      text-align: right;
+
+      label {
+        .truncate-text;
+        padding-top: @base-spacing / 2;
+      }
+    }
+
+    .sum {
+      &::before {
+        content: '= ';
+      }
+    }
+  }
+}
+
+.payment-list {
+  td span {
+    &::after {
+      content: ',';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}

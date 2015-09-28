@@ -1,0 +1,13 @@
+<div navigation active="next"></div>
+<table class="table payment-list">
+  <tbody>
+    <tr ng-if="shouldPayNext" class="info">
+      <td>
+        <strong>{{ shouldPayNext.name }}</strong> should pay next
+      </td>
+    </tr>
+    <tr ng-if="!shouldPayNext">
+      <td>No payments entries available.</td>
+    </tr>
+  </tbody>
+</table>

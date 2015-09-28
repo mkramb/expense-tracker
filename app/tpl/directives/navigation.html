@@ -1,0 +1,11 @@
+<ul class="nav nav-tabs" ng-switch on="active">
+  <li role="presentation" ng-class="{ 'active': isSelected('add') }">
+    <a ui-sref="add">Add payment</a>
+  </li>
+  <li role="presentation" ng-class="{ 'active': isSelected('list') }">
+    <a ui-sref="list">Payment list</a>
+  </li>
+  <li role="presentation" ng-class="{ 'active': isSelected('next') }">
+    <a ui-sref="next">Who should pay next</a>
+  </li>
+</ul>

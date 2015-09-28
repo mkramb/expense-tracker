@@ -1,0 +1,17 @@
+<div navigation active="list"></div>
+<table class="table payment-list">
+  <tbody>
+    <tr ng-repeat="item in entries | reverse">
+      <td>
+        {{ item.date | date:'short' }}
+        <strong>{{ item.name }}</strong> paid {{ currency }}{{ item.total }} for:
+        <span ng-repeat="forWho in item.payments">
+          {{ forWho.name }} ({{ currency }}{{ forWho.paid }})
+        </span>
+      </td>
+    </tr>
+    <tr ng-if="!entries || !entries.length">
+      <td>No payments entries available.</td>
+    </tr>
+  </tbody>
+</table>

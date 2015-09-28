@@ -1,0 +1,23 @@
+<div class="users">
+  <div class="row" ng-repeat="user in users">
+    <div class="col-xs-4 users-label">
+      <label for="{{ getFieldName(user.name) }}">
+        {{ user.name }}
+      </label>
+    </div>
+    <div class="col-xs-8">
+      <input
+        type="text"
+        class="form-control"
+        ng-model="user.paid"
+        ng-currency currency-symbol="{{ currency }}"
+        aria-describedby="{{ getFieldName(user.name) }}"
+        id="{{ getFieldName(user.name) }}"
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-8 sum">{{ sum | number:2 }}</div>
+  </div>
+</div>

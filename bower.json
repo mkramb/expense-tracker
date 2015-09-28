@@ -1,0 +1,16 @@
+{
+  "name": "expense-tracker",
+  "ignore": [
+    "**/.*",
+    "lib"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-ui-router": "~0.2.15",
+    "angular-mocks": "~1.4.4",
+    "angularfire": "~1.1.2",
+    "bootstrap": "~3.3.5",
+    "ng-currency": "~0.8.9",
+    "underscore": "~1.8.3"
+  }
+}

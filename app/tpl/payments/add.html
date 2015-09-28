@@ -1,0 +1,31 @@
+<div navigation active="add"></div>
+<form
+  name="paymentForm"
+  ng-submit="submitForm(paymentForm.$valid)"
+  novalidate
+>
+  <div class="form-group">
+    <label for="who_pays">Who pays</label>
+    <select required
+      type="text"
+      name="who_pays"
+      class="form-control"
+      ng-model="form.user"
+      ng-options="user.name for user in users"
+      ng-change="selectWhoPays(form.user)"
+    ></select>
+  </div>
+  <div class="form-group" ng-show="form.users">
+    <label for="who_pays">For whom</label>
+    <div users-input
+      users="form.users"
+      currency="{{ currency }}"
+      sum="form.user.paid"
+    ></div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary pull-right"
+    ng-disabled="paymentForm.$invalid || form.user.paid === 0"
+  >Submit</button>
+</form>
