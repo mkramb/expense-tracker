@@ -12,5 +12,8 @@
     "bootstrap": "~3.3.5",
     "ng-currency": "~0.8.9",
     "underscore": "~1.8.3"
+  },
+  "resolutions": {
+    "angular": "1.4.6"
   }
 }
