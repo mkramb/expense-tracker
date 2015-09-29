@@ -6,8 +6,6 @@ describe('Directives', function() {
   beforeEach(module('app'));
 
   describe('UsersInput', function() {
-    var mockRatingStars = 4.56;
-
     beforeEach(inject(function($compile, $rootScope, AppConfig, UsersSrv) {
       compile = $compile;
       scope = $rootScope.$new();
