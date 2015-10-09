@@ -1,5 +1,7 @@
 # expense-tracker
 
+Simple expense tracker, using firebase for realtime updates.
+
 ### Install
 
 ```sh
